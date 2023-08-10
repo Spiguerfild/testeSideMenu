@@ -8,17 +8,27 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-list>
+
+  <ion-list *ngFor="let e of elenco">
     <ion-item>
-      <ion-label>Meliodas</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>Harlequin</ion-label>
+      <ion-avatar slot="start">
+        <img src="{{e.caminho}}" />
+      </ion-avatar>
+      <ion-label slot="start">{{e.nome}}</ion-label>
+      <ion-badge color="warning" slot="end">{{e.curtidas}}</ion-badge>
     </ion-item>
 
   </ion-list>
+  <br><br>
 
-  <ion-img src={{img1}}></ion-img>
-  <ion-img src={{img2}}></ion-img>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Meliodas</ion-card-title>
+      <ion-card-subtitle>Full counter</ion-card-subtitle>
+    </ion-card-header>
+    <ion-img src="{{caminho}}"></ion-img>
+
+  </ion-card>
+
 
 </ion-content>
