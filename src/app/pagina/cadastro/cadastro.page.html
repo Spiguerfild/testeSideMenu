@@ -12,7 +12,7 @@
   <ion-list>
     <ion-item>
       <ion-label position="floating">nome</ion-label>
-      <ion-input type="text" placeholder="Informe seu nome"></ion-input>
+      <ion-input type="text" placeholder="Informe seu nome" [(ngModel)]="pessoa.nome"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">email</ion-label>
@@ -50,6 +50,7 @@
 
 
   </ion-list>
+
   <ion-button expand="block" (click)="presentToast('bottom')">Present Toast At the Bottom</ion-button>
 
 </ion-content>
